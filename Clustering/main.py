@@ -1,11 +1,7 @@
 import pandas as pd
 import numpy as np
-import time
 from matplotlib import pyplot as plt
 from algorithm import GuassianModel
-
-
-# Just click run and get the result
 
 df = pd.read_table('./abalone.data',sep=',')
 origin = np.array(df)
