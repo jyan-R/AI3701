@@ -56,11 +56,9 @@ def LogisticRegression(data, validate = None, lr = 0.05, rk = 0, max_iter = 1000
     # initialize para for gradient desent
     weight = np.ones((n_features, 1))
     bia = 1
-    wx_b = X @ weight + bia
-    
+    wx_b = X @ weight + bia    
 
     # define useful func
-    #np_map = lambda f,x: np.array(list(map(f, x)))
     Sigmoid = lambda x: 1 / (1 + np.exp(-x))
     Ln_part = lambda x: np.log(1 + np.exp(x))
 
@@ -83,7 +81,7 @@ def LogisticRegression(data, validate = None, lr = 0.05, rk = 0, max_iter = 1000
         LLhood = np.mean(Y * wx_b - Ln_part(wx_b))
         LLhood += rk * np.sum(weight **2) / n_components
 
-        # stop iter when gredient close to 0 
+        # stop iter when gradient close to 0 
         if (np.linalg.norm(dw) + db * db < 1e-4):
             total_iter = i
             break

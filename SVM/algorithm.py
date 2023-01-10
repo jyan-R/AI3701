@@ -1,6 +1,10 @@
 import numpy as np
 
 class SVM:
+    '''
+    Implement of SVM using STO to solve the dual
+    '''
+
     def __init__(self, X, Y, C, ker = 'poly', kpara = 1, max_iter = 200):
         self.X = np.array(X)
         self.Y = np.array(Y)

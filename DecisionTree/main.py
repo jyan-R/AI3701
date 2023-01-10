@@ -31,7 +31,7 @@ train_listp = []
 test_listp = []
 config_list = []
 
-# these processes may take 20min...
+# The process takes time due to the scale of data and iterative algorithm stragedy...
 for depth in range(5,31,5):
     print('Building tree..., now depth: ', depth)
     mytree.Config(max_depth = depth, prune = False)
